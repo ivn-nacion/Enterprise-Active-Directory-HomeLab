@@ -1,0 +1,4 @@
+FirstName,LastName,Username,Department,OU,SecurityGroup
+Pedro,Juan,pjuan,IT,"OU=IT,OU=IvanCorp,DC=ivan,DC=local",GRP_IT_Staff
+Ana,Reyes,areyes,HR,"OU=HR,OU=IvanCorp,DC=ivan,DC=local",GRP_HR_Staff
+Carlos,Mendoza,cmendoza,IT,"OU=IT,OU=IvanCorp,DC=ivan,DC=local",GRP_IT_Staff
