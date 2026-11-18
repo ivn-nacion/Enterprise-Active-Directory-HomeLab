@@ -27,3 +27,4 @@ End-to-end enterprise IT infrastructure home lab built on **VMware Workstation**
 * **[Phase 7: Linux Server Hardening, Nginx Web Hosting & pfSense Port Forwarding](docs/07-Linux-Hardening-Nginx-DMZ.md)** – Deployed and hardened an Nginx web portal on CentOS Stream 10 inside the DMZ (`firewalld` + `PermitRootLogin no`) and exposed it externally via pfSense WAN Port Forwarding (`192.168.92.141:80` → `172.16.20.50:80`).
 * **[Phase 8: Centralized Cross-Platform Infrastructure Monitoring](docs/08-Zabbix-Centralized-Monitoring.md)** – Deployed Zabbix 7.0 LTS with MariaDB on Ubuntu 24.04 LTS to monitor Windows Server 2025 (AD DC), CentOS Stream 10 (DMZ), and Ubuntu endpoints in a unified NOC dashboard.
 * [09 - pfSense 802.1Q VLAN Segmentation, pfBlockerNG & Suricata IDS/IPS Tuning](docs/09-pfSense-VLAN-pfBlockerNG-Suricata.md)
+* [10 - Active Directory Metadata Cleanup, Cross-VLAN DNS & PowerShell User Lifecycle](docs/10-AD-Metadata-Cleanup-PowerShell-Lifecycle.md)
