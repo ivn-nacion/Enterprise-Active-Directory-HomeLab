@@ -19,7 +19,8 @@ Configured 8 tagged VLAN sub-interfaces on the LAN trunk (`em1`) across the isol
 | **VLAN 70** | `GUEST_WIFI` | `10.100.70.0/24` | `10.100.70.1` | Visitor Wireless Access |
 | **VLAN 80** | `DMZ` | `10.100.80.0/24` | `10.100.80.1` | Public-Facing Services |
 
-![802.1Q VLAN Segmentation](../pfsense_VLAN.png)
+![802.1Q VLAN Segmentation](../screenshots/pfsense_VLAN.png)
+
 
 ---
 
@@ -28,7 +29,7 @@ Configured 8 tagged VLAN sub-interfaces on the LAN trunk (`em1`) across the isol
 * **Sinkhole VIP Configuration:** Created a `/32` IP Alias (`10.255.255.1`) on `Localhost` for the DNSBL webserver to avoid overlapping with `10.100.10.0/24`.
 * **Threat Feeds & Whitelisting:** Enabled DNSBL (`Yoyo` tracker feed) and IPv4 threat blocklists (`ET_Block`, `Spamhaus_Drop`, `CINS_army`) across `LAN` and `VLAN20`. Analyzed real-time blocks under `Reports > Alerts` and implemented wildcard/exact whitelisting (e.g., `.google.com`, `.github.com`, `.atlassian.com`) to resolve false positives safely.
 
-![pfBlockerNG IP & DNSBL Alerts](../pfblockerng_Alerts.png)
+![pfBlockerNG IP & DNSBL Alerts](../screenshots/pfblockerng_Alerts.png)
 
 ---
 
@@ -37,4 +38,4 @@ Configured 8 tagged VLAN sub-interfaces on the LAN trunk (`em1`) across the isol
 * **Virtualization & Offload Tuning:** Identified false-positive alerts caused by virtual NIC checksum offloading (`SID 1:2200074` TCPv4 invalid checksum and `SID 1:2200075` UDPv4 invalid checksum). Disabled hardware checksum, TSO, and LRO offloading under `System > Advanced > Networking` and suppressed both SIDs via the Suricata Suppress List.
 * **IPS Validation & Remediation:** Enabled Legacy IPS Mode (`Block Offenders`) and validated active blocking against outbound test signatures (`SID 1:2100498` via `testmyids.com` and custom ICMP signature `SID 1:9000001`), followed by manual host unblocking under the `Blocks` tab and reverting to IDS Mode.
 
-![Suricata IDS/IPS Alerts & Suppression](../Suricata_Alerts.png)
+![Suricata IDS/IPS Alerts & Suppression](../screenshots/Suricata_Alerts.png)
